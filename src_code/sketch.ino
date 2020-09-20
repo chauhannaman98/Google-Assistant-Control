@@ -91,7 +91,7 @@ void MQTT_connect() {
     mqtt.disconnect();
     delay(5000);  // wait 5 seconds
     retries--;
-    f (retries == 0) {
+    if (retries == 0) {
       // basically die and wait for WDT to reset me
       while (1);
     }
